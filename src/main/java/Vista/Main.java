@@ -3,6 +3,8 @@
  */
 
 package Vista;
+import Modelo.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,6 +13,7 @@ package Vista;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int cantClientes = 0;
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     }
 }
