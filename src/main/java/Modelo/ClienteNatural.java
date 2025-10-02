@@ -10,13 +10,13 @@ package Modelo;
  */
 public class ClienteNatural extends Cliente {
 
-    public ClienteNatural(String nombreCliente, Cuenta cuentaCliente, String numeroCuenta, int tipoCuenta) {
-        super(nombreCliente, cuentaCliente, numeroCuenta, tipoCuenta);
+    public ClienteNatural(String nombreCliente, String numeroCuenta, int tipoCuenta) {
+        super(nombreCliente, numeroCuenta, tipoCuenta);
     }
     
     @Override 
     public final String toString() {
-        return "Cliente Natural";
+        return this.nombreCliente + " : " + cuentaCliente.toString() + " | Categoría: Natural";
     }
     
 }

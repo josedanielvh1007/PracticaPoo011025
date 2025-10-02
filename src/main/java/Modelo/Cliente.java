@@ -15,11 +15,11 @@ public class Cliente {
     protected final String nombreCliente;
     protected Cuenta cuentaCliente;
 
-    public Cliente(String nombreCliente, Cuenta cuentaCliente, String numeroCuenta, int tipoCuenta) {
+    public Cliente(String nombreCliente, String numeroCuenta, int tipoCuenta) {
         this.nombreCliente = nombreCliente;
         switch (tipoCuenta) {
-            case 0 -> this.cuentaCliente = new CuentaAhorros(numeroCuenta, nombreCliente); 
-            case 1 -> this.cuentaCliente = new CuentaCorriente(numeroCuenta, nombreCliente);
+            case 1 -> this.cuentaCliente = new CuentaAhorros(numeroCuenta); 
+            case 2 -> this.cuentaCliente = new CuentaCorriente(numeroCuenta);
         }
     }
     
@@ -51,5 +51,9 @@ public class Cliente {
         if (this.cuentaCliente.getSaldoCuenta() == saldoEstimado) {
             JOptionPane.showMessageDialog(null, "El retiro fue exitoso. Nuevo saldo : " + saldoEstimado);
         }
+    }
+    
+    public Cuenta getCuentaCliente() {
+        return cuentaCliente;
     }
 }

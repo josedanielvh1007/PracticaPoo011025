@@ -8,15 +8,15 @@ package Modelo;
  *
  * @author jose
  */
-public class CuentaCorriente extends Cuenta {
+public class ClienteJuridico extends Cliente {
 
-    public CuentaCorriente(String numeroCuenta) {
-        super(numeroCuenta);
+    public ClienteJuridico(String nombreCliente, String numeroCuenta, int tipoCuenta) {
+        super(nombreCliente, numeroCuenta, tipoCuenta);
     }
     
     @Override
     public final String toString() {
-        String infoCuenta = "Cuenta N°: " + numeroCuenta + " | Saldo: $" + saldoCuenta + " | Tipo: Corriente";
-        return infoCuenta;
+        return this.nombreCliente + " : " + cuentaCliente.toString() + " | Categoría: Juridico]";
     }
+    
 }

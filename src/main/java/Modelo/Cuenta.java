@@ -10,21 +10,15 @@ package Modelo;
  */
 public class Cuenta {    
     protected final String numeroCuenta;
-    protected final String titularCuenta;
     int saldoCuenta;
 
-    public Cuenta(String numeroCuenta, String titularCuenta ) {
+    public Cuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
-        this.titularCuenta = titularCuenta;
         this.saldoCuenta = 0;
     }
 
     public String getNumeroCuenta() {
         return numeroCuenta;
-    }
-
-    public String getTitularCuenta() {
-        return titularCuenta;
     }
 
     public int getSaldoCuenta() {

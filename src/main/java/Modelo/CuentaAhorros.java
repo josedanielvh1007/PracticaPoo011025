@@ -10,13 +10,13 @@ package Modelo;
  */
 public class CuentaAhorros extends Cuenta {
     
-    public CuentaAhorros(String numeroCuenta, String titularCuenta) {
-        super(numeroCuenta, titularCuenta);
+    public CuentaAhorros(String numeroCuenta) {
+        super(numeroCuenta);
     }
     
     @Override
     public final String toString() {
-        String infoCuenta = this.getTitularCuenta() + "[" + this.getNumeroCuenta() + "] (Ahorros)";
+        String infoCuenta = "Cuenta N°: " + numeroCuenta + " | Saldo: $" + saldoCuenta + " | Tipo: Ahorros";
         return infoCuenta;
     }
     
